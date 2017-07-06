@@ -17,9 +17,9 @@
             box-shadow: inset 0 -2px 0 0 $accent;
 
             + .k-input-bar::after {
-                width: 100%;
                 background: $accent;
                 opacity: 1;
+                transform: scaleX(1);
             }
         }
 
@@ -36,11 +36,10 @@
                 left: 0;
                 right: 0;
                 height: 2px;
-                width: 0;
                 margin: auto;
                 opacity: 0;
-                -webkit-transition: width .3s;
-                transition: width .3s;
+                transform: scaleX(.5);
+                transition: transform .3s;
             }
 		}
 
