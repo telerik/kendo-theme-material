@@ -107,6 +107,26 @@ Used to provide contrast between the background and foreground colors.
 </td>
 </tr>
 <tr>
+<td>$secondary</td>
+<td>
+    <span class="color-preview" style="background-color: #ff4081"></span>
+    #ff4081
+</td>
+<td>The secondary color for focusing user attention.<br/>
+Used to focus attention, more sparingly than the primary accent.
+</td>
+</tr>
+<tr>
+<td>$secondary-contrast</td>
+<td>
+    <span class="color-preview" style="background-color: #ffffff"></span>
+    #ffffff
+</td>
+<td>The color used along with the secondary accent color denoted by $secondary.<br/>
+Used to provide contrast between the background and foreground colors.
+</td>
+</tr>
+<tr>
 <td>$base-text</td>
 <td>
     
