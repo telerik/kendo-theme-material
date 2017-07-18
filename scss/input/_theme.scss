@@ -75,3 +75,36 @@
         }
     }
 }
+
+$checkbox-border: rgba(0,0,0,.54) !default;
+$checkbox-checked-bg: $secondary !default;
+$checkbox-checked-border: $checkbox-checked-bg !default;
+$checkbox-checked-text: $secondary-contrast !default;
+$checkbox-focused-border: $checkbox-border !default;
+$checkbox-focused-shadow: none !default;
+$checkbox-focused-checked-shadow: none !default;
+
+$radio-border: $checkbox-border !default;
+$radio-checked-bg: $secondary-contrast !default;
+$radio-checked-border: $secondary !default;
+$radio-checked-text: $radio-checked-border !default;
+
+@import "~@progress/kendo-theme-default/scss/input/theme";
+
+@include exports('input/theme/checkbox-radiobutton/material') {
+
+    .k-checkbox:indeterminate + .k-checkbox-label::before {
+        background-color: $checkbox-checked-bg;
+        border-color: $checkbox-checked-bg;
+    }
+
+    // TODO: this needs to go in layout and use $checkbox-size
+    .k-checkbox:indeterminate + .k-checkbox-label::after {
+        background-color: $checkbox-checked-text;
+        width: 16px;
+        height: 2px;
+        left: 2px;
+        top: 9px;
+    }
+
+}
