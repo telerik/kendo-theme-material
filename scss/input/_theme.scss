@@ -98,13 +98,8 @@ $radio-checked-text: $radio-checked-border !default;
         border-color: $checkbox-checked-bg;
     }
 
-    // TODO: this needs to go in layout and use $checkbox-size
     .k-checkbox:indeterminate + .k-checkbox-label::after {
         background-color: $checkbox-checked-text;
-        width: 16px;
-        height: 2px;
-        left: 2px;
-        top: 9px;
     }
 
 }
