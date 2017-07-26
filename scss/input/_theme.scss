@@ -92,6 +92,10 @@ $radio-checked-text: $radio-checked-border !default;
 @import "~@progress/kendo-theme-default/scss/input/theme";
 
 @include exports('input/theme/checkbox-radiobutton/material') {
+    .k-checkbox:checked + .k-checkbox-label::before {
+        font-size: 1.1em;
+        text-indent: 1px;
+    }
 
     .k-checkbox:indeterminate + .k-checkbox-label::before {
         background-color: $checkbox-checked-bg;
