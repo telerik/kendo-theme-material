@@ -109,7 +109,8 @@ $radio-checked-text: $radio-checked-border !default;
     .k-ripple-blob {
         .k-checkbox-label &,
         .k-radio-label & {
-            background-color: transparentize($checkbox-checked-bg, .7);
+            opacity: .2;
+            background-color: $checkbox-checked-bg;
         }
     }
 }
