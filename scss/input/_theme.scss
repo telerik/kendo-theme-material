@@ -83,6 +83,7 @@ $checkbox-checked-text: $secondary-contrast !default;
 $checkbox-focused-border: $checkbox-border !default;
 $checkbox-focused-shadow: none !default;
 $checkbox-focused-checked-shadow: none !default;
+$checkbox-focused-checked-border: $secondary !default;
 
 $radio-border: $checkbox-border !default;
 $radio-checked-bg: $secondary-contrast !default;
@@ -104,6 +105,11 @@ $radio-checked-text: $radio-checked-border !default;
 
     .k-checkbox:indeterminate + .k-checkbox-label::after {
         background-color: $checkbox-checked-text;
+    }
+
+    .k-radio-label::after {
+        background-color: $checkbox-checked-bg;
+        transition: transform linear 280ms;
     }
 
     .k-ripple-blob {
