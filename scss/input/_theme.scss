@@ -39,18 +39,19 @@
 }
 
 $checkbox-border: rgba(0, 0, 0, .54) !default;
-$checkbox-checked-bg: $secondary !default;
+$checkbox-checked-bg: $primary !default;
 $checkbox-checked-border: $checkbox-checked-bg !default;
-$checkbox-checked-text: $secondary-contrast !default;
+$checkbox-checked-text: $primary-contrast !default;
+$checkbox-hovered-border: $checkbox-border !default;
 $checkbox-focused-border: $checkbox-border !default;
 $checkbox-focused-shadow: none !default;
 $checkbox-focused-checked-shadow: none !default;
-$checkbox-focused-checked-border: $secondary !default;
+$checkbox-focused-checked-border: $primary !default;
 $checkbox-disabled-bg: #b0b0b0 !default;
 
 $radio-border: $checkbox-border !default;
-$radio-checked-bg: $secondary-contrast !default;
-$radio-checked-border: $secondary !default;
+$radio-checked-bg: $primary-contrast !default;
+$radio-checked-border: $primary !default;
 $radio-checked-text: $radio-checked-border !default;
 
 @import "~@progress/kendo-theme-default/scss/input/theme";
