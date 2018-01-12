@@ -175,6 +175,10 @@ $success: #37b400 !default;
 /// The color for informational messages and states.
 $info: #0058e9 !default;
 
+$upload-progress-error: #ff1744 !default;
+$upload-progress-success: $success !default;
+$upload-progress-info: $secondary !default;
+
 $invalid-border-color: rgba($error, .5) !default;
 
 $gradient-transparent-to-black: rgba( black, 0), black;
@@ -300,10 +304,10 @@ $primary-button-focused-shadow: 0 3px 4px 0 rgba($accent, .4) !default;
 
 // Action buttons
 $action-button-text: rgba( $accent, .87 );
-
 $action-button-hovered-bg: rgba( $accent, 0.12 );
-
 $action-button-pressed-bg: rgba( $accent, 0.16 );
+
+$action-button-cancel-bg: rgba( black, 0.12 );
 
 // Toolbar
 $toolbar-text: $button-text !default;
