@@ -1,0 +1,168 @@
+@include exports ('grid/theme') {
+    //Theme
+    $grid-text: rgba(0, 0, 0, .87) !default;
+    $grid-header-text: rgba(0, 0, 0, .54) !default;
+    $grid-border: rgba(0, 0, 0, .12) !default;
+    $grid-alt-bg: rgba(0, 0, 0, .02) !default;
+    $grid-sorted-column-bg: rgba(0, 0, 0, .04) !default;
+    $grid-selected-row-bg: rgba(0, 0, 0, .04) !default;
+    $grid-selected-cell-bg: rgba(0, 0, 0, .04) !default;
+    $grid-row-hover-bg: rgba(0, 0, 0, .07) !default;
+    $grid-filter-button-focus: rgba(0, 0, 0, .12) !default;
+    $grid-text-dark: rgba(0, 0, 0, 1) !default;
+    $grid-locked-column-shadow: inset 18px 0 5px -15px rgba(0, 0, 0, .14);
+
+    .k-grid {
+        color: $grid-text;
+
+        td,
+        th {
+            border-bottom: 1px solid $grid-border;
+            background-clip: padding-box;
+        }
+
+        tr {
+            background-clip: padding-box;
+        }
+
+        td.k-state-selected {
+            background-color: $grid-selected-cell-bg;
+        }
+
+        .k-grid-header .k-sorted,
+        col.k-sorted {
+            background-color: $grid-sorted-column-bg;
+        }
+
+        table {
+            tr:hover,
+            tr:focus {
+                color: $grid-text;
+                background-color: $grid-row-hover-bg;
+            }
+
+            tr:focus {
+                color: $grid-text;
+                background-color: $grid-row-hover-bg;
+            }
+
+            tr.k-state-selected:hover {
+                color: $grid-text-dark;
+                background-color: $grid-row-hover-bg;
+            }
+
+            tr.k-state-selected {
+                color: $grid-text-dark;
+                background-color: $grid-selected-row-bg;
+            }
+        }
+    }
+    .k-grid-lockedcolumns {
+        .k-grid-header-locked {
+            border-right-color: $grid-border;
+        }
+
+        .k-grid-content,
+        .k-grid-header-wrap {
+            box-shadow: $grid-locked-column-shadow;
+        }
+    }
+
+    .k-grid-header {
+        color: $grid-header-text;
+        border-color: $grid-border;
+
+        .k-sorted {
+            color: $grid-text;
+            font-weight: 700;
+        }
+
+        .k-sort-order {
+            margin: 0;
+            height: auto;
+        }
+
+        th:hover {
+            color: $grid-text;
+
+            .k-link>.k-icon.k-i-sort-asc-sm,
+            .k-link>.k-icon.k-i-sort-desc-sm,
+            .k-sort-order,
+            .k-i-filter {
+                color: $grid-header-text;
+            }
+        }
+
+        .k-grid-filter {
+            &:hover {
+                color: $grid-text;
+                background-color: transparent;
+            }
+
+            &:focus {
+                background-color: $grid-filter-button-focus;
+                box-shadow: none;
+            }
+        }
+    }
+}
+
+//Layout
+@include exports ('input/layout/grid/material') {
+    $grid-header-font-size: 12px !default;
+    $grid-filter-button-offset: -10px !default;
+    $grid-filter-button-size: 36px !default;
+    $grid-header-line-height: 16px !default;
+    $grid-cell-padding-y: 20px !default;
+    $grid-cell-padding-x: 24px !default;
+
+    .k-grid {
+        line-height: 1;
+
+        th.k-header {
+            font-size: $grid-header-font-size;
+            line-height: $grid-header-line-height;
+        }
+
+        tr {
+            border-bottom-width: 0;
+        }
+
+        .k-grid-header-wrap .k-header,
+        .k-grid-header-locked .k-header {
+            padding: $grid-cell-padding-y $grid-cell-padding-x;
+        }
+
+        .k-grid-content {
+            line-height: 1;
+
+            td {
+                border-width: 0;
+                border-bottom-width: 1px;
+                padding: $grid-cell-padding-y $grid-cell-padding-x;
+            }
+        }
+    }
+
+    .k-grid-header {
+        border-width: 0 0 1px 0;
+
+        th {
+            border-width: 0;
+        }
+
+        .k-grid-filter {
+            margin: $grid-filter-button-offset 0;
+            width: $grid-filter-button-size;
+            height: $grid-filter-button-size;
+            border-radius: 50%;
+        }
+
+        .k-header .k-link>.k-icon.k-i-sort-asc-sm,
+        .k-header .k-link>.k-icon.k-i-sort-desc-sm {
+            margin-left: 8px;
+            margin-right: 4px;
+            vertical-align: bottom;
+        }
+    }
+}
