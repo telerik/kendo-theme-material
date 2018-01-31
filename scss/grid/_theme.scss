@@ -7,6 +7,7 @@
     $grid-sorted-column-bg: rgba(0, 0, 0, .04) !default;
     $grid-selected-row-bg: rgba(0, 0, 0, .04) !default;
     $grid-selected-cell-bg: rgba(0, 0, 0, .04) !default;
+    $grid-focused-cell-bg: rgba(0, 0, 0, .07) !default;
     $grid-row-hover-bg: rgba(0, 0, 0, .07) !default;
     $grid-filter-button-focus: rgba(0, 0, 0, .12) !default;
     $grid-text-dark: rgba(0, 0, 0, 1) !default;
@@ -17,16 +18,16 @@
 
         td,
         th {
-            border-bottom: 1px solid $grid-border;
-            background-clip: padding-box;
+            border-bottom-color: $grid-border;
         }
 
-        tr {
-            background-clip: padding-box;
-        }
-
-        td.k-state-selected {
+        .k-state-selected {
+            color: $grid-text;
             background-color: $grid-selected-cell-bg;
+        }
+
+        .k-state-focused {
+            background-color: $grid-focused-cell-bg;
         }
 
         .k-grid-header .k-sorted,
@@ -35,25 +36,24 @@
         }
 
         table {
+            color: $grid-text;
+
             tr:hover,
             tr:focus {
-                color: $grid-text;
                 background-color: $grid-row-hover-bg;
             }
 
             tr:focus {
-                color: $grid-text;
-                background-color: $grid-row-hover-bg;
-            }
-
-            tr.k-state-selected:hover {
-                color: $grid-text-dark;
                 background-color: $grid-row-hover-bg;
             }
 
             tr.k-state-selected {
                 color: $grid-text-dark;
                 background-color: $grid-selected-row-bg;
+            }
+
+            tr.k-state-selected:hover {
+                background-color: $grid-row-hover-bg;
             }
         }
     }

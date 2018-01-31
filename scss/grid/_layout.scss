@@ -7,6 +7,7 @@
     $grid-header-line-height: 16px !default;
     $grid-cell-padding-y: 20px !default;
     $grid-cell-padding-x: 24px !default;
+    $grid-header-padding-right: 14px !default; //check if this is right with designer
 
     .k-grid {
         line-height: 1;
@@ -33,7 +34,7 @@
 
         .k-grid-header-wrap .k-header,
         .k-grid-header-locked .k-header {
-            padding: $grid-cell-padding-y $grid-cell-padding-x;
+            padding: $grid-cell-padding-y $grid-header-padding-right $grid-cell-padding-x $grid-cell-padding-x;
         }
 
         .k-grid-content {
@@ -58,10 +59,14 @@
             font-weight: 700;
         }
 
-        .k-grid-filter {
+        .k-grid-filter,
+        .k-header-column-menu {
             margin: $grid-filter-button-offset 0;
             width: $grid-filter-button-size;
             height: $grid-filter-button-size;
+        }
+
+        .k-grid-filter {
             border-radius: 50%;
         }
 
