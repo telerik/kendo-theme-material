@@ -8,6 +8,7 @@
     $grid-cell-padding-y: 20px !default;
     $grid-cell-padding-x: 24px !default;
     $grid-header-padding-right: 14px !default; //check if this is right with designer
+    $grid-form-component-offset: -12px !default;
 
     .k-grid {
         line-height: 1;
@@ -45,6 +46,15 @@
                 border-bottom-width: 1px;
                 padding: $grid-cell-padding-y $grid-cell-padding-x;
             }
+        }
+
+        .k-grid-edit-row td>.k-textbox,
+        .k-grid-edit-row td>.k-widget,
+        .k-command-cell>.k-button,
+        .k-edit-cell>.k-textbox,
+        .k-edit-cell>.k-widget {
+            margin-top: $grid-form-component-offset;
+            margin-bottom: $grid-form-component-offset;
         }
     }
 

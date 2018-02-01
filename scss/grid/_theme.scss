@@ -11,7 +11,10 @@
     $grid-row-hover-bg: rgba(0, 0, 0, .07) !default;
     $grid-filter-button-focus: rgba(0, 0, 0, .12) !default;
     $grid-text-dark: rgba(0, 0, 0, 1) !default;
-    $grid-locked-column-shadow: inset 18px 0 5px -15px rgba(0, 0, 0, .14);
+    $grid-locked-column-shadow: inset 18px 0 5px -15px rgba(0, 0, 0, .14) !default;
+    $grid-edit-cell-border: rgba(0, 0, 0, .12) !default;
+    $grid-edit-cell-bg: #f5f5f5 !default;
+    $grid-edit-cell-shadow: 0 0 5px 3px rgba(0, 0, 0, .12) !default;
 
     .k-grid {
         color: $grid-text;
@@ -55,6 +58,12 @@
             tr.k-state-selected:hover {
                 background-color: $grid-row-hover-bg;
             }
+        }
+
+        .k-edit-cell {
+            border-bottom: $grid-edit-cell-border;
+            background-color: $grid-edit-cell-bg;
+            box-shadow: $grid-edit-cell-shadow;
         }
     }
     .k-grid-lockedcolumns {
