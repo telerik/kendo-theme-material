@@ -1,5 +1,4 @@
 @import "variables";
-@import "~@progress/kendo-theme-default/scss/variables";
 
 // Dependencies
 @import "mixins";
@@ -54,12 +53,12 @@
 
 
 // Layout
-//@import "dialog";
+@import "dialog";
 //@import "notification";
 //@import "responsivepanel";
 //@import "splitter";
 //@import "tooltip";
-//@import "window";
+@import "window";
 
 
 // Navigation

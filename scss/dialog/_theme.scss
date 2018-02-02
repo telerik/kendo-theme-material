@@ -1,0 +1,24 @@
+@include exports("dialog/theme") {
+    .k-dialog-buttongroup {
+        .k-button {
+            color: $text-color;
+
+            &:hover {
+                background-color: $base-border;
+            }
+        }
+
+        .k-button.k-primary {
+            color: $accent;
+
+            &:hover {
+                background-color: $action-button-hovered-bg;
+            }
+
+            &:active {
+                color: $action-button-text;
+                background-color: $action-button-pressed-bg;
+            }
+        }
+    }
+}
