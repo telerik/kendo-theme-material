@@ -23,10 +23,8 @@
                 }
             }
 
-            // TODO: Consider removing this after
-            // issue: https://github.com/telerik/kendo-angular-upload/issues/115
-            em {
-                font-style: normal;
+            .k-dropzone-hint {
+                margin-left: $upload-padding;
             }
         }
 
