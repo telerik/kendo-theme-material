@@ -1,3 +1,5 @@
+## This repository has been archived.<br> Development has moved to the [`kendo-themes` monorepo](https://github.com/telerik/kendo-themes).
+
 # Kendo UI Material Theme
 
 > The Kendo UI Material theme is in a preview stage. The current setup is subject to breaking changes without prior notice.
